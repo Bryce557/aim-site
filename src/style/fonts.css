@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700');
+
+.acm-italic {
+    font-style: italic;
+  }
+  
+  .acm-heavy {
+    font-weight: 500;
+  }
+  
+  .acm-heavier {
+    font-weight: 600;
+    color: white;
+  }
+  
+  .acm-heaviest {
+    font-weight: 700;
+  }
+  
+  .acm-blue {
+    color: var(--acm-blue);
+  }
+  
+  .acm-bluer {
+    color: var(--acm-bluer);
+  }
+  
+  .acm-turquoise {
+    color: var(--acm-turquoise);
+  }
+  
+  .acm-emerald {
+    color: var(--acm-emerald);
+  }
+  
+  .acm-lemon {
+    color: var(--acm-lemon);
+  }
+  
+  .acm-orange {
+    color: var(--acm-orange);
+  }
+  
+  .acm-pink {
+    color: var(--acm-pink);
+  }
+  
+  .acm-blush {
+    color: var(--acm-blush);
+  }
+  
+  .acm-purple {
+    color: var(--acm-purple);
+  }
+  
+  .acm-red {
+    color: var(--acm-red);
+  }
+  
+  .acm-redder {
+    color: var(--acm-redder);
+  }
+  
+  .acm-sky {
+    color: var(--acm-sky);
+  }
+  
+  .acm-dark {
+    color: var(--acm-dark);
+  }
+  
+  .acm-gray {
+    color: var(--acm-gray);
+  }
+  
+  .acm-light {
+    color: var(--acm-light);
+  }
+  
+  .size-xxl {
+    font-size: var(--size-xxl);
+  }
+  
+  .size-xl {
+    font-size: var(--size-xl);
+  }
+  
+  .size-lg {
+    font-size: var(--size-lg);
+  }
+  
+  .size-md {
+    font-size: var(--size-md);
+  }
+  
+  .size-sm {
+    font-size: var(--size-sm);
+  }
+  
+  .size-xs {
+    font-size: var(--size-xs);
+  }
+  
+  

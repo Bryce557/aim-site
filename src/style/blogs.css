@@ -1,0 +1,26 @@
+@import url('colors.css');
+@import url('fonts.css');
+
+.card-style {
+    display: 'flex';
+    flex-direction: 'column';
+    text-align: 'left';
+    width: 50em;
+    margin-left:30%;
+    margin-top: 6rem;
+}
+
+.blog-style {
+    margin-top: 10rem;
+}
+
+.body-style {
+    font-size: 15px;
+    text-align: left;
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.title-style {
+    font-size: 30px;
+}

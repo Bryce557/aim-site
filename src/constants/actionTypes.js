@@ -1,0 +1,9 @@
+const Constants = {
+    USER_LOGGEDIN: 'USER_LOGGEDIN',
+    USER_LOGOUT: 'USER_LOGOUT',
+    FETCH_BLOG_POSTS: 'FETCH_BLOG_POSTS',
+    FETCH_BLOG_POST: 'FETCH_BLOG_POST',
+    SET_BLOG_POST: 'SET_BLOG_POST'
+}
+
+export default Constants;

@@ -1,0 +1,71 @@
+@import url('colors.css');
+@import url('fonts.css');
+
+.black-background {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+
+  .welcome {
+    position: absolue;
+    padding-top: 75px;
+    padding-bottom: 225px;
+    background-color: var(--acm-lightgray);
+    height: 200px;
+    text-align: center;
+  }
+
+  .lottie-container {
+    position: relative; /* Ensure the container is positioned relative */
+    padding-top: 40px;
+  }
+  
+  .gradient-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, var(--acm-turquoise), var(--acm-sky), var(--acm-blue), 
+    var(--acm-bluer), var(--acm-blue),  var(--acm-blue), var(--acm-purple), var(--acm-purple), var(--acm-pink), var(--acm-red));
+  }
+
+  .span {
+    text-align: center;
+  }
+
+  .terminalDiv {
+    padding: 50px;
+    margin: 25px;
+    background-color: black;
+  }
+  
+  .terminal {
+    text-align: left;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    color: var(--acm-emerald);
+    background-color: black;
+  }
+
+  *,
+html,
+body {
+  color: var(--acm-dark);
+  padding: 0;
+  margin: 0;
+  transition: 0.2s;
+  font-family: 'Poppins', 'Verdana', 'Helvetica', sans-serif;
+  font-display: fallback;
+}
+
+body {
+  background-color: var(--acm-light);
+  transition: 0.2s;
+}
+
+body:has(nav > input[type='checkbox']:checked) {
+  overflow: hidden;
+}
