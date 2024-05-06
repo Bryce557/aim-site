@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import { fetchBlogPosts } from "../actions/blogActions";
 import { setBlogPost } from "../actions/blogActions";
 import {connect} from 'react-redux';
-import {Image, Nav} from 'react-bootstrap';
-import {LinkContainer} from 'react-router-bootstrap';
-import { CardGroup, Button, Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import '../style/blogs.css'
 import { TypeAnimation } from 'react-type-animation';
 import '../style/colors.css'
 import '../style/fonts.css'
+import { submitResponse } from '../actions/blogActions'
+import {LinkContainer} from 'react-router-bootstrap';
 
 
 class BlogPosts extends Component {
@@ -32,6 +32,11 @@ class BlogPosts extends Component {
         const {dispatch} = this.props;
         dispatch(setBlogPost(blogPost));
     }
+
+    handleResponse(){
+        const {dispatch} = this.props;
+        dispatch(submitResponse(this.state.details));
+    }
     
     render() {
         const BlogPostGroup = ({blogPosts}) => {
@@ -40,7 +45,6 @@ class BlogPosts extends Component {
                 return <div>Loading...</div>
             }
 
-            //const blogs = blogPosts.blogs;
             console.log(blogPosts);
             return (
                 <div className="blog-style"> 
@@ -49,14 +53,16 @@ class BlogPosts extends Component {
                     </h1> 
                     <div className="card-style">
                     
-                            {blogPosts.map((blog) => 
-                                <Card text='muted' style={{marginBottom: '5rem'}} bg='dark' key={blog._id}>
-                                    <Card.Header className="title-style acm-heavier" >{blog.title}</Card.Header>
-                                    <Card.Text className="body-style acm-heavier" >{blog.body}</Card.Text>
-                                    <br></br>
-                                </Card>
-                            )}
-                    
+                    {blogPosts.map((blog) => 
+                        <Card text='muted' style={{marginBottom: '5rem'}} bg='dark' key={blog._id}>
+                            <Card.Header className="title-style acm-heavier">{blog.title}</Card.Header>
+                            <Card.Body className="body-style acm-heavier">{blog.body}</Card.Body>
+                            <Card.Footer>
+                                <Button size="large" className="acm-multi-color button">Add Comment</Button>
+                            </Card.Footer>
+                            <br />
+                        </Card>
+                    )}
                     </div>
                 </div> 
             )

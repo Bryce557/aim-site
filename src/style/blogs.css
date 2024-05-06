@@ -4,9 +4,8 @@
 .card-style {
     display: 'flex';
     flex-direction: 'column';
-    text-align: 'left';
     width: 50em;
-    margin-left:30%;
+    margin-left:29%;
     margin-top: 6rem;
 }
 
@@ -17,10 +16,10 @@
 .body-style {
     font-size: 15px;
     text-align: left;
-    margin-top: 1rem;
-    margin-left: 3rem;
+    margin-left: 1rem;
 }
 
 .title-style {
     font-size: 30px;
+    text-align: left;
 }

@@ -1,10 +1,10 @@
+/*
 import React, { Component } from 'react';
 import { fetchBlogPost } from "../actions/blogActions";
-import { setBlogPost } from "../actionjs/blogActions";
+import { setBlogPost } from "../actions/blogActions";
 import {connect} from 'react-redux';
 import {Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { BsStarFill } from 'react-icons/bs'
-import { Image } from 'react-bootstrap';
+import ResponseForm from './responseForm';
 
 class BlogDetail extends Component {
 
@@ -12,6 +12,7 @@ class BlogDetail extends Component {
         const {dispatch} = this.props;
         if (this.props.selectedBlogPost == null) {
             dispatch(fetchBlogPost(this.props.blogId));
+            console.log(this.props.blogId);
         }
     }
 
@@ -20,25 +21,32 @@ class BlogDetail extends Component {
             if (!this.props.selectedBlogPost) {
                 return <div>Loading....</div>
             }
-
+            console.log(this.props.selectedBlogPost);
             return (
                 <Card>
                     <Card.Header>Blog Post</Card.Header>
-                    <Card.Title>
-                        <div className="">this.props.selectedBlogPost.title</div>
-                    </Card.Title>
+                    <ListGroup>
+                        <ListGroupItem>{this.props.selectedBlogPost.title}</ListGroupItem>
+                        <ListGroupItem>{this.props.selectedBlogPost.body}</ListGroupItem>
+                        <ListGroupItem>{this.props.selectedBlogPost.author}</ListGroupItem>
+                        <ListGroupItem>{this.props.selectedBlogPost.date}</ListGroupItem>
+                    </ListGroup>
                     <Card.Body>
-                        <div className="">this.props.selectedBlogPost.body</div>
+                        {this.props.selectedBlogPost.replies.map((reply, i) =>
+                            <p key={i}>
+                                <b>{reply.authorId}</b>&nbsp; {reply.body}
+                            </p>
+                        )}
                     </Card.Body>
-                    <Card.Footer>
-                        <div>this.props.selectedBlogPost.author</div>
-                    </Card.Footer>
                 </Card>
             )
         }
 
         return (
-            <DetailInfo />
+            <div>
+                <DetailInfo />
+                <ResponseForm id={this.props.selectedBlogPost}/>
+            </div>
         )
     }
 }
@@ -52,7 +60,7 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps)(BlogDetail);
 
 
-/*
+
 <ListGroup>
                         <ListGroupItem>{this.props.selectedMovie.title}</ListGroupItem>
                         <ListGroupItem>

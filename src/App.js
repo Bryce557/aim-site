@@ -9,6 +9,7 @@ import Authentication from './components/authentication';
 import AcmHeader from './components/acmheader';
 import Register from './components/register';
 import Blogs from './components/blogs'
+import BlogDetail from './components/blogdetail'
 import './App.css'
 
 function App() {
@@ -31,3 +32,4 @@ export default App;
 
 //
 //<Route exact path="/blogs/:blogId" render={()=><Blogs />}/>
+//  <Route path="/blogs/:blogId" render={()=><BlogDetail />}/>
