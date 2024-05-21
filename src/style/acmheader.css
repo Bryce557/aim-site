@@ -2,7 +2,7 @@
 @import url('fonts.css');
 
 .navbar {
-    background: black;
+    background: var(--acm-dark);
     height: 100px; /* Set the desired height */
 }
 

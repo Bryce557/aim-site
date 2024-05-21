@@ -1,18 +1,21 @@
 @import url('colors.css');
 @import url('fonts.css');
 
-.black-background {
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-  }
+
+.background-beams {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind all other content */
+  background-color: var(--acm-dark);
+}
 
   .welcome {
     position: absolue;
-    padding-top: 75px;
-    padding-bottom: 225px;
-    background-color: var(--acm-lightgray);
+    margin-top: 20rem;
+    margin-bottom: 20rem;
     height: 200px;
     text-align: center;
   }
@@ -34,20 +37,6 @@
 
   .span {
     text-align: center;
-  }
-
-  .terminalDiv {
-    padding: 50px;
-    margin: 25px;
-    background-color: black;
-  }
-  
-  .terminal {
-    text-align: left;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 20px;
-    color: var(--acm-emerald);
-    background-color: black;
   }
 
   *,

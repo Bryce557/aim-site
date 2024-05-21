@@ -3,7 +3,7 @@ import { submitRegister } from '../actions/authActions';
 import { connect } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
-import '../style/login.css'
+import '../style/register.css'
 import '../style/colors.css'
 import '../style/fonts.css'
 
@@ -39,52 +39,50 @@ class Register extends Component {
 
     render(){
         return (
-            <div className="login-style">
-                <h1 className="acm-multi-color">Create an account</h1><br /><br />
-                <Form className='form-horizontal'>
+            <div> 
+                <div className="register-style">
+                    <h1 className="acm-multi-color">Create an account</h1><br /><br />
+                    <Form className='form-horizontal'>
+                        
+                        <Form.Group controlId="name">
+                            <Form.Label style={{ color: 'white' }}>Name</Form.Label>
+                            <Form.Control
+                                onChange={this.updateDetails} value={this.state.details.name} type="name"
+                                className="textbox-background" 
+                            /> 
+                        </Form.Group>
+                        <br /> 
                     
-                    <Form.Group controlId="name">
-                        <Form.Label style={{ color: 'white' }}>Name</Form.Label>
-                        <Form.Control
-                            onChange={this.updateDetails} value={this.state.details.name} type="name"
-                            className="textbox-background" 
-                        /> 
-                    </Form.Group>
-                    <br /> 
-                
-                    <Form.Group controlId="email">
-                        <Form.Label style={{ color: 'white' }}>Email</Form.Label>
-                        <Form.Control
-                            onChange={this.updateDetails} value={this.state.details.email} type="email"
-                            className="textbox-background" 
-                        /> 
-                    </Form.Group>
-                    <br /> 
-                    
-                    <Form.Group controlId="password">
-                        <Form.Label style={{ color: 'white' }}>Password</Form.Label>
-                        <Form.Control
-                            onChange={this.updateDetails} value={this.state.details.password} type="password"
-                            className="textbox-background"
-                        /> 
-                        <Form.Text style={{ marginLeft: '25%', marginRight: '25%' }}muted>
-                            Your password must be 8-20 characters long and include at least one lowercase
-                            and uppercase letter, a number, a special character, and no spaces.
-                        </Form.Text><br />
-                    </Form.Group>
-                    
-                    <div className="button-container acm-multi-color"> 
-                        <LinkContainer to="./">
-                            <Button size="large" className="acm-multi-color button" onClick={this.register}>Register</Button>
-                        </LinkContainer>  
-                    </div><br /><br />    
-                    
-                    <div className="container">
-                        <div id="appleid-signin" data-color="black" data-border="false" data-type="sign in"></div>
-                    </div>
-
-                 </Form>
-            </div>
+                        <Form.Group controlId="email">
+                            <Form.Label style={{ color: 'white' }}>Email</Form.Label>
+                            <Form.Control
+                                onChange={this.updateDetails} value={this.state.details.email} type="email"
+                                className="textbox-background" 
+                            /> 
+                        </Form.Group>
+                        <br /> 
+                        
+                        <Form.Group controlId="password">
+                            <Form.Label style={{ color: 'white' }}>Password</Form.Label>
+                            <Form.Control
+                                onChange={this.updateDetails} value={this.state.details.password} type="password"
+                                className="textbox-background"
+                            /> 
+                            <Form.Text style={{ marginLeft: '8%', marginRight: '8%' }}muted>
+                                Your password must be 8-20 characters long and include at least one lowercase
+                                and uppercase letter, a number, a special character, and no spaces.
+                            </Form.Text><br />
+                        </Form.Group>
+                        
+                        <div className="button-container acm-multi-color"> 
+                            <LinkContainer to="./">
+                                <Button size="large" className="acm-multi-color button" onClick={this.register}>Register</Button>
+                            </LinkContainer>  
+                        </div><br /><br />    
+                    </Form>
+                </div>
+                <br /><br /><br />
+            </div>   
         )
     }
 }

@@ -79,7 +79,7 @@
 
   /** These values may change based on the user's color scheme preference. */
   --acm-light: #f8f8f8;
-  --acm-dark: #101315;
+  --acm-dark: rgb(16, 19, 21);
   --acm-canvas: rgba(234, 234, 234, 1);
   --acm-odd: var(--perma-light);
   --acm-even: var(--acm-dew);
